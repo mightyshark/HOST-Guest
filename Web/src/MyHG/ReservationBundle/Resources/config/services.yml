@@ -1,0 +1,4 @@
+services:
+#    my_hg_reservation.example:
+#        class: MyHG\ReservationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

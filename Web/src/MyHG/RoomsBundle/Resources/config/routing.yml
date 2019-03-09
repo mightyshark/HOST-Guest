@@ -1,0 +1,34 @@
+my_hg_rooms_homepage:
+    path:     /
+    defaults: { _controller: MyHGRoomsBundle:Default:index }
+
+
+
+
+
+my_hg_rooms_ajouter:
+    path:     /ajouter
+    defaults: { _controller: MyHGRoomsBundle:Room:ajouter}
+
+
+
+my_hg_rooms_afficher:
+    path:     /afficher
+    defaults: { _controller: MyHGRoomsBundle:Room:afficher}
+
+
+my_hg_rooms_modifier:
+    path:     /modifier
+    defaults: { _controller: MyHGRoomsBundle:Room:modifier}
+
+
+my_hg_rooms_recherche:
+    path:     /rechercher
+    defaults: { _controller: MyHGRoomsBundle:Room:rechercher}
+
+
+my_hg_rooms_supprimer:
+    path:     /supprimer
+    defaults: { _controller: MyHGRoomsBundle:Room:supprimer}
+
+

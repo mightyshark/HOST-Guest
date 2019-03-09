@@ -1,0 +1,19 @@
+my_hg_reservation_homepage:
+    path:     /
+    defaults: { _controller: MyHGReservationBundle:Reservation:liste }
+
+my_hg_reservation_ajout:
+    path:     /ajout
+    defaults: { _controller: MyHGReservationBundle:Reservation:ajouter }
+
+my_hg_reservation_supp:
+    path:     /supprimer
+    defaults: { _controller: MyHGReservationBundle:Reservation:supprimer }
+
+my_hg_reservation_modif:
+    path:     /modifier
+    defaults: { _controller: MyHGReservationBundle:Reservation:modifier }
+
+my_hg_reservation_rech:
+    path:     /rechercher
+    defaults: { _controller: MyHGReservationBundle:Reservation:recherch }

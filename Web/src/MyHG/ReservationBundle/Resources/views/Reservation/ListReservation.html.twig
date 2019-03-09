@@ -1,0 +1,28 @@
+{% extends "MyHGUserBundle:Template:index.html.twig" %}
+{% block body %}
+page reservation liste<br/>
+<br/>
+<table border="1">
+    <tr>
+        <td>Guest </td>
+        <td>Host</td>
+        <td>Room</td>
+        <td>Date d'arrivée</td>
+        <td>Date de depart</td>
+        <td> </td>
+    </tr>
+    {%  for r in reservation  %}
+        <tr>
+            <td>{{ r.guestid }}</td>
+            <td>{{ r.hostid }}</td>
+            <td>{{ r.roomid }}</td>
+            <td>{{ r.datearrivee | date('d-m-y') }}</td>
+            <td>{{ r.datedepart | date('d-m-y') }}</td>
+            <td><a href="{{ path('my_hg_reservation_supp',{'id': r.id}) }}">Supprimer</a> </td>
+            <td><a href="{{ path('my_hg_reservation_modif',{'id': r.id}) }}">Modifier</a> </td>
+        </tr>
+    {% else %}
+        La liste est vide
+    {% endfor %}
+</table>
+{% endblock body %}

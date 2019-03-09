@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="517.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AffichFXMLController">
+   <children>
+      <ImageView fitHeight="319.0" fitWidth="866.0" layoutX="-2.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img_src/bright-blue-morning-sky3.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableView" layoutX="-2.0" layoutY="317.0" onMouseClicked="#ShowOnClick" prefHeight="200.0" prefWidth="866.0">
+        <columns>
+          <TableColumn fx:id="c_nom" prefWidth="117.0" text="Nom" />
+          <TableColumn fx:id="c_cap" minWidth="0.0" prefWidth="53.0" text="Capacité" />
+            <TableColumn fx:id="c_nbrlit" minWidth="0.0" prefWidth="67.0" text="Nbrlit" />
+            <TableColumn fx:id="c_prix" prefWidth="54.0" text="Prix" />
+            <TableColumn fx:id="c_desc" prefWidth="101.0" text="Description" />
+            <TableColumn fx:id="c_type" prefWidth="79.0" text="Type" />
+            <TableColumn fx:id="c_uptime" prefWidth="83.0" text="UpdTime" />
+            <TableColumn fx:id="c_adr" prefWidth="137.0" text="Adresse" />
+            <TableColumn fx:id="c_id" prefWidth="50.0" text="id" />
+            <TableColumn fx:id="c_idhost" minWidth="0.0" prefWidth="51.0" text="hostId" />
+            <TableColumn fx:id="c_img" minWidth="0.0" prefWidth="160.0" text="Img                 " />
+        </columns>
+      </TableView>
+      <VBox layoutX="32.0" layoutY="5.0" prefHeight="187.0" prefWidth="227.0">
+         <children>
+            <JFXTextField fx:id="txt_nom" promptText="Name" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txt_capacite" promptText="Capacite" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txt_nbr_Lit" promptText="nbr_Lit" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txt_Prix" prefHeight="25.0" prefWidth="202.0" promptText="Prix" unFocusColor="WHITE" />
+            <JFXComboBox fx:id="txt_Type" prefHeight="25.0" prefWidth="237.0" promptText="Choisir un type " unFocusColor="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXComboBox>
+            <JFXTextField fx:id="txt_adresse" promptText="adresse " unFocusColor="WHITE" />
+            <JFXTextField fx:id="txt_updateTime" prefHeight="31.0" prefWidth="227.0" promptText="updateTime" unFocusColor="WHITE" />
+            <JFXTextField fx:id="txt_img_name" promptText="img_name" unFocusColor="WHITE" />
+         </children>
+      </VBox>
+      <VBox layoutX="300.0" layoutY="5.0" prefHeight="200.0" prefWidth="121.0">
+         <children>
+            <JFXTextArea fx:id="txt_description" prefHeight="200.0" prefWidth="117.0" promptText="Description" unFocusColor="WHITE" />
+            <JFXTextArea fx:id="texthost" />
+         </children>
+      </VBox>
+      <JFXTextField fx:id="txt_search2" focusColor="#1fc66a" labelFloat="true" layoutX="643.0" layoutY="276.0" maxWidth="205.0" minWidth="121.0" onKeyReleased="#rech" prefHeight="31.0" prefWidth="121.0" promptText="Rechercher" unFocusColor="#5b97ff" />
+      <VBox layoutX="764.0" prefHeight="142.0" prefWidth="100.0">
+         <children>
+            <JFXButton fx:id="btn_delete" buttonType="RAISED" onAction="#delete" prefHeight="35.0" prefWidth="99.0" ripplerFill="#9bb3c2" style="-fx-background-color: #9bb3c2;" text="Supprimer">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btn_ajout" buttonType="RAISED" onAction="#Ajouter" prefHeight="35.0" prefWidth="99.0" ripplerFill="#9bb3c2" style="-fx-background-color: #9bb3c2;" text="Nouvelle Room">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btn_modifier" buttonType="RAISED" onAction="#updateR" prefHeight="35.0" prefWidth="99.0" ripplerFill="#9bb3c2" style="-fx-background-color: #9bb3c2;" text="Modifier">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton fx:id="btn_home" buttonType="RAISED" onAction="#gohome" prefHeight="35.0" prefWidth="99.0" ripplerFill="#9bb3c2" style="-fx-background-color: #9bb3c2;" text="Home">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+         </children>
+      </VBox>
+      <ImageView fx:id="imgVw" fitHeight="150.0" fitWidth="200.0" layoutX="467.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img_src/078802-blue-metallic-orb-icon-business-home5.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="browse_btn" layoutX="506.0" layoutY="159.0" onAction="#browseEvent" style="-fx-background-color: #9ABFF5;" text="Parcourir .." textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <GoogleMapView fx:id="mapVie" layoutX="605.0" layoutY="46.0" prefHeight="150.0" prefWidth="159.0" />
+      
+   </children>
+</AnchorPane>

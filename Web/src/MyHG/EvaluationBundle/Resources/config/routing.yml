@@ -1,0 +1,3 @@
+my_hg_evaluation_homepage:
+    path:     /
+    defaults: { _controller: MyHGEvaluationBundle:Default:index }

@@ -1,0 +1,3 @@
+my_hg_reclamation_homepage:
+    path:     /
+    defaults: { _controller: MyHGReclamationBundle:Default:index }

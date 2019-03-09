@@ -1,0 +1,4 @@
+services:
+#    my_hg_user.example:
+#        class: MyHG\UserBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

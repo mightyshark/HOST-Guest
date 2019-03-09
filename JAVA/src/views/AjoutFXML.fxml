@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.lynden.gmapsfx.GoogleMapView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="364.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AjoutFXMLController">
+   <children>
+      <ImageView fx:id="imgVw1" fitHeight="537.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="@../img_src/bright-blue-morning-sky3.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="90.0" layoutY="62.0" prefHeight="152.0" prefWidth="227.0">
+         <children>
+            <JFXTextField fx:id="txt_nom" promptText="Nom" />
+            <JFXTextField fx:id="txt_capacite" promptText="Capacite" />
+            <JFXTextField fx:id="txt_nbr_Lit" promptText="nbr_Lit" />
+            <JFXTextField fx:id="txt_Prix" prefHeight="25.0" prefWidth="202.0" promptText="Prix" />
+            <VBox prefHeight="61.0" prefWidth="227.0">
+               <children>
+                  <JFXComboBox fx:id="cmb_Type" prefHeight="25.0" prefWidth="237.0" promptText="Choisir un type ">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></JFXComboBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="63.0" prefWidth="227.0" />
+         </children>
+      </VBox>
+      <Text fill="#791d1d" layoutX="156.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ajouter votre chambre" textAlignment="CENTER" wrappingWidth="321.13671875" AnchorPane.leftAnchor="156.0">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Text>
+      <HBox layoutX="364.0" layoutY="321.0" prefHeight="27.0" prefWidth="190.0">
+         <children>
+            <JFXButton buttonType="RAISED" onAction="#AjouterEvent" prefHeight="44.0" prefWidth="95.0" style="-fx-background-color: #9ABFF5;" text="Valider" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+            <JFXButton buttonType="RAISED" onAction="#annuler" prefHeight="45.0" prefWidth="105.0" style="-fx-background-color: #9ABFF5;" text="Annuler " textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></JFXButton>
+         </children>
+      </HBox>
+      <VBox layoutX="395.0" layoutY="62.0" prefHeight="170.0" prefWidth="100.0">
+         <children>
+            <JFXTextField fx:id="txt_adresse" promptText="adresse " />
+            <JFXTextField fx:id="txt_updateTime" promptText="updateTime" />
+            <JFXTextField fx:id="txt_img_name" promptText="img_name" />
+            <JFXTextArea fx:id="txt_description" prefHeight="88.0" prefWidth="100.0" promptText="Description" />
+         </children>
+      </VBox>
+      <JFXButton fx:id="browse_btn" layoutX="130.0" layoutY="322.0" onAction="#browseEvent" style="-fx-background-color: #9ABFF5;" text="Parcourir .." textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></JFXButton>
+      <ImageView fx:id="imageview" fitHeight="115.0" fitWidth="119.0" layoutX="109.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img_src/078802-blue-metallic-orb-icon-business-home5.png" />
+         </image></ImageView>
+      <GoogleMapView fx:id="mapView" layoutX="126.0" layoutY="356.0" prefHeight="181.0" prefWidth="197.0" />
+   </children>
+</AnchorPane>

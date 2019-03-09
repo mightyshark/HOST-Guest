@@ -1,0 +1,14 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/service_container.html
+parameters:
+#    parameter_name: value
+
+
+services:
+    fos_user.doctrine_registry:
+        alias: doctrine
+
+    app.form.registration:
+            class: MyHG\UserBundle\MyHGUserBundle\Form\ClientType
+            tags:
+                - { name: form.type, alias: myhg_userbundle_client }

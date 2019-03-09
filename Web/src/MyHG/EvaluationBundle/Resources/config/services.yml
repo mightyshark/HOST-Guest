@@ -1,0 +1,4 @@
+services:
+#    my_hg_evaluation.example:
+#        class: MyHG\EvaluationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

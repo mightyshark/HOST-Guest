@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="168.0" prefWidth="550.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="controllers.AjoutEventController">
+   <children>
+      <JFXDatePicker fx:id="dp_date_debut" layoutX="25.0" layoutY="113.0" promptText="Date Debut" />
+      <JFXDatePicker fx:id="dp_date_fin" layoutX="25.0" layoutY="69.0" promptText="Date Fin" />
+      <JFXTextField fx:id="tf_nom" layoutX="25.0" layoutY="16.0" promptText="nom" />
+      <JFXTextField fx:id="tf_place" layoutX="196.0" layoutY="16.0" promptText="place" />
+      <JFXTextField fx:id="tf_description" layoutX="196.0" layoutY="54.0" prefHeight="98.0" prefWidth="207.0" promptText="Description" />
+      <JFXButton fx:id="btn_aout_event" layoutX="403.0" layoutY="85.0" onAction="#ajout" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: #555555;" text="Ajouter" />
+   </children>
+</AnchorPane>

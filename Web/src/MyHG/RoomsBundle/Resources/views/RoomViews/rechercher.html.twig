@@ -1,0 +1,40 @@
+page liste room
+
+{{ form_start(form) }}
+{{ form_widget(form.capacite) }}
+
+{{ form_widget(form.rechercher) }}
+{{ form_end(form) }}
+
+<table border="1px">
+    <tr>
+
+        <td>id </td>
+        <td>nomHost</td>
+        <td>capacite</td>
+        <td>nbrLit</td>
+        <td>prix</td>
+        <td>description</td>
+        <td>modifier</td>
+        <td>supprimer</td>
+
+    </tr>
+    {% for rm in rooms %}
+        <tr>
+            <td>{{ rm.id }}</td>
+            <td>{{ rm.idHost }}</td>
+            <td>{{ rm.capacite }}</td>
+            <td>{{ rm.nbrLit }}</td>
+            <td>{{ rm.prix }}</td>
+            <td>{{ rm.description }}</td>
+            <td><a href="{{ path('my_hg_rooms_modifier',{'id':rm.id}) }}">modifier</a></td>
+            <td><a href="{{ path('my_hg_rooms_supprimer',{'id': rm.id}) }}">supprimer</a> </td>
+
+
+
+        </tr>
+    {% else %} La liste est vide
+    {% endfor %}
+</table>
+
+

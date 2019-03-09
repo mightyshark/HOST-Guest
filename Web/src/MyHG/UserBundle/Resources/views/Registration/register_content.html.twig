@@ -1,0 +1,68 @@
+
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+
+{{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+
+
+
+    <div class="container">
+        <div class="preamble  col-md-12">
+
+            <br>
+            <br>
+
+
+            {{ form_widget(form.nom, { 'attr': {'class': 'form-control', 'placeholder': 'Nom' |trans } }) }}
+            {{ form_errors(form.nom) }}
+            <br>
+
+            {{ form_widget(form.prenom, { 'attr': {'class': 'form-control', 'placeholder': 'Prenom' |trans } }) }}
+            {{ form_errors(form.prenom) }}
+            <br>
+
+
+            {{ form_widget(form.cin, { 'attr': {'class': 'form-control', 'placeholder': 'Nom' |trans } }) }}
+            {{ form_errors(form.cin) }}
+            <br>
+
+            {{ form_widget(form.adress , { 'attr': {'class': 'form-control', 'placeholder': 'Votre Adresse' |trans } }) }}
+            {{ form_errors(form.adress) }}
+            <br>
+
+
+            {{ form_widget(form.email , { 'attr': {'class': 'form-control', 'placeholder': 'Email' |trans } }) }}
+            {{ form_errors(form.email) }}
+            <br>
+
+
+            {{ form_widget(form.username, { 'attr': {'class': 'form-control', 'placeholder': 'Username'|trans } }) }}
+            {{ form_errors(form.username) }}
+            <br>
+
+
+
+            {{ form_widget(form.plainPassword.first, { 'attr': {'class': 'form-control', 'placeholder': 'Password'|trans } }) }}
+            {{ form_errors(form.plainPassword.first) }}
+            <br>
+
+            {{ form_widget(form.plainPassword.second, { 'attr': {'class': 'form-control', 'placeholder': 'Retype Password'|trans } }) }}
+            {{ form_errors(form.plainPassword.second) }}
+            <br>
+
+
+            {{ form_rest(form) }}
+
+            <input type="submit" class="btn btn-transparent-gray" value="{{ 'registration.submit'|trans }}" />
+        </div>
+    </div>
+
+
+
+
+
+
+{{ form_end(form) }}
+
+

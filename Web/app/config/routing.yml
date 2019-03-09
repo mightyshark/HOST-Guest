@@ -1,0 +1,30 @@
+my_hg_reclamation:
+    resource: "@MyHGReclamationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_hg_evaluation:
+    resource: "@MyHGEvaluationBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_hg_experience:
+    resource: "@MyHGExperienceBundle/Resources/config/routing.yml"
+    prefix:   /
+
+my_hg_reservation:
+    resource: "@MyHGReservationBundle/Resources/config/routing.yml"
+    prefix:   /reservation
+
+my_hg_rooms:
+    resource: "@MyHGRoomsBundle/Resources/config/routing.yml"
+    prefix:   /rooms
+
+my_hg_user:
+    resource: "@MyHGUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"

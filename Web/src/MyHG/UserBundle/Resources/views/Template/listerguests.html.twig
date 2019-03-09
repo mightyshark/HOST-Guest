@@ -1,0 +1,29 @@
+
+
+
+<table border="1">
+    <tr>
+        <td>id </td>
+        <td>address </td>
+        <td>modifier</td>
+        <td>suppr</td>
+
+    </tr>
+{%  for host in hosts  %}
+    <tr>
+        <td>{{ host.id }}</td>
+        <td>{{ host.addresse }}</td>
+        <td><a href="{{ path('my_hg_host_modifier',{'id': host.id}  ) }}">Modifier</a> </td>
+        <td><a href="{{ path('my_hg_host_supprimer',{'id': host.id}) }}">supprimer</a> </td>
+
+
+
+
+    </tr>
+
+    {% else %}
+    La liste est vide
+{% endfor %}
+</table>
+
+

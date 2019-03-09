@@ -1,0 +1,36 @@
+my_hg_user_homepage:
+    path:     /home
+    defaults: { _controller: MyHGUserBundle:Default:index }
+
+my_hg_host_afficher:
+    path:     /afficherhost
+    defaults: { _controller: MyHGUserBundle:Host:afficher }
+
+my_hg_host_ajouter:
+    path:     /ajouterhost
+    defaults: { _controller: MyHGUserBundle:Host:ajouter }
+
+my_hg_host_modifier:
+    path:     /modifierhost
+    defaults: { _controller: MyHGUserBundle:Host:modifier }
+
+my_hg_host_supprimer:
+    path:     /supprimerhost
+    defaults: { _controller: MyHGUserBundle:Host:supprimer }
+
+my_hg_guest_afficher:
+    path:     /afficherguest
+    defaults: { _controller: MyHGUserBundle:Guest:afficher }
+
+my_hg_guest_ajouter:
+    path:     /ajouterguest
+    defaults: { _controller: MyHGUserBundle:Guest:ajouter }
+
+my_hg_guest_modifier:
+    path:     /modifierguest
+    defaults: { _controller: MyHGUserBundle:Guest:modifier }
+
+my_hg_guest_supprimer:
+    path:     /supprimerguest
+    defaults: { _controller: MyHGUserBundle:Guest:supprimer }
+

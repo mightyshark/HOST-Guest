@@ -1,0 +1,4 @@
+services:
+#    my_hg_reclamation.example:
+#        class: MyHG\ReclamationBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

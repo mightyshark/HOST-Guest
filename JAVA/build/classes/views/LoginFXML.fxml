@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="523.0" prefWidth="727.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginFXMLController">
+   <children>
+      <ImageView fx:id="image" fitHeight="229.0" fitWidth="200.0" layoutX="35.0" layoutY="192.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane layoutX="17.0" layoutY="22.0" prefHeight="97.0" prefWidth="734.0">
+         <children>
+            <ImageView fx:id="logimg" fitHeight="53.0" fitWidth="71.0" layoutX="37.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Desktop/ESPRIT/New%20folder%20(2)/HostGuest/HostGuest/src/img_src/login.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="tfusername" labelFloat="true" layoutX="147.0" layoutY="37.0" promptText="Username" />
+            <JFXPasswordField fx:id="tfpwd" labelFloat="true" layoutX="325.0" layoutY="40.0" promptText="Password" />
+            <JFXButton fx:id="btnconnecter" layoutX="495.0" layoutY="40.0" onAction="#connecter" prefHeight="25.0" prefWidth="124.0" text="Connecter " />
+         </children>
+      </Pane>
+      <AnchorPane layoutX="350.0" layoutY="155.0" prefHeight="354.0" prefWidth="347.0">
+         <children>
+            <JFXTextField fx:id="tfusernamenew" labelFloat="true" layoutX="101.0" layoutY="14.0" prefHeight="25.0" prefWidth="215.0" promptText="Usename" />
+            <JFXPasswordField fx:id="tfpasswordnew1" layoutX="101.0" layoutY="60.0" prefHeight="25.0" prefWidth="215.0" promptText="Password" />
+            <JFXPasswordField fx:id="tfpasswordnew2" layoutX="101.0" layoutY="116.0" prefHeight="25.0" prefWidth="215.0" promptText="Repeat Password" />
+            <JFXTextField fx:id="tfemailnew" labelFloat="true" layoutX="101.0" layoutY="177.0" prefHeight="25.0" prefWidth="215.0" promptText="e-mail" />
+            <Label layoutX="105.0" layoutY="228.0" text="Gender : " />
+            <Label layoutX="94.0" layoutY="265.0" text="Type : " />
+            <JFXRadioButton fx:id="rdhomme" layoutX="155.0" layoutY="228.0" text="Male" />
+            <JFXRadioButton fx:id="rdfemme" layoutX="233.0" layoutY="228.0" text="Femme" />
+            <JFXComboBox fx:id="cb" layoutX="162.0" layoutY="261.0" prefHeight="25.0" prefWidth="149.0" />
+            <JFXButton fx:id="signupbtn" layoutX="266.0" layoutY="315.0" onAction="#signUp" style="-fx-background-color: #3B5998;" text="Sign Up" />
+            <JFXButton fx:id="btnFB" layoutX="79.0" layoutY="315.0" onAction="#authUser" style="-fx-background-color: #3B5998;" text="Sign Up with FB" textFill="#ffffff6e" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
